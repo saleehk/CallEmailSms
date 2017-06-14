@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String phoneNumber = phoneEditText.getText().toString();
-                Toast.makeText(MainActivity.this, getLastCallPhoneNumber(), Toast.LENGTH_LONG).show();
                 SmsManager smsManager = SmsManager.getDefault();
 
                 if (android.os.Build.VERSION.SDK_INT >= 22) {
@@ -56,15 +55,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 smsManager.sendTextMessage(phoneNumber, null, messageEditText.getText().toString(), null, null);
-
+                Toast.makeText(MainActivity.this, "Message send", Toast.LENGTH_LONG).show();
+                finish();
             }
         });
         String phoneNumber = getLastCallPhoneNumber();
 
         phoneEditText.setText(phoneNumber);
-        messageEditText.setText("mail@mail.com");
+        messageEditText.setText("skg@sijokuruvilla.in");
         checkPermissions();
-        SmsManager smsManager = SmsManager.getDefault();
 
 
     }
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         String phoneNumber = getLastCallPhoneNumber();
 
         phoneEditText.setText(phoneNumber);
-        Toast.makeText(this, "Updated", Toast.LENGTH_LONG).show();
+        //       Toast.makeText(this, "Updated", Toast.LENGTH_LONG).show();
     }
 
     public String getLastCallPhoneNumber() {
