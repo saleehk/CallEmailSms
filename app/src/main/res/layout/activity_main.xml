@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.saleehk.emailcall.MainActivity">
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="364dp"
+        android:layout_height="44dp"
+        android:text="Send mail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="447dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="64dp" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="354dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Phone Number"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="32dp"
+        android:layout_marginBottom="46dp"
+        android:layout_above="@+id/content"
+        android:layout_alignRight="@+id/send"
+        android:layout_alignEnd="@+id/send" />
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="343dp"
+        android:layout_height="148dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="false"
+        android:text="Content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="110dp" />
+</RelativeLayout>
